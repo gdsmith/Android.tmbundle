@@ -69,7 +69,7 @@ def main(*args):
 
         child.expect('GSM modem support.*')
         child.sendline(args[22])
-
+        child.sendline("\n")
         child.expect ('\r\n')
         
         if(str(child).find("before (last 100 chars): hw.gsmModem [yes]:yes")!=-1 or str(child).find("exitstatus: None")!=-1):

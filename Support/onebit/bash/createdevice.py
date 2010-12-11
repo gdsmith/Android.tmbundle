@@ -5,7 +5,7 @@ import pexpect
 def main(*args):  
     
     cmd = '"%s/tools/android" create avd -n %s -t %s' % (os.environ['ANDROID_SDK'], args[1], args[2])
-         
+             
     child = pexpect.spawn(cmd)
     
     try:
@@ -69,6 +69,7 @@ def main(*args):
 
         child.expect('GSM modem support.*')
         child.sendline(args[21])
+        child.sendline("\n")
 
         child.expect ('\r\n')
         
