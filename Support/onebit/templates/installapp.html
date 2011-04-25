@@ -49,7 +49,8 @@
                 }
                 if (device!="BAD") {
                     command = "";
-                    cmd('"$ANDROID_SDK"/platform-tools/adb -s "'+device+'" shell rm "/data/app/{{ package }}.apk"');
+					var uninstallCmd = '"$ANDROID_SDK"/platform-tools/adb -s "'+device+'" uninstall {{ package }}';
+	                cmd(uninstallCmd);
                     TextMate.system(command, null)
                     command = "";
                     cmd('cd "$TM_BUNDLE_SUPPORT"');
