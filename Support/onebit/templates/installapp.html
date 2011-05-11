@@ -45,8 +45,10 @@
                         device = device.substring(0,i);
                     }
                 }  else {
-                    $('#output').html('No devices found.\n\n')
+                    $('#output').html('No devices found.\n\n');
+					device = "BAD";
                 }
+
                 if (device!="BAD") {
                     command = "";
 					var uninstallCmd = '"$ANDROID_SDK"/platform-tools/adb -s "'+device+'" uninstall {{ package }}';
