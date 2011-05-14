@@ -7,3 +7,5 @@ h2. Homepage: "http://www.onebitwonder.com/projects/android/":http://www.onebitw
 h2. How to install: "http://www.onebitwonder.com/projects/android/install":http://www.onebitwonder.com/projects/android/install
 
 h2. Tutorial: "http://www.onebitwonder.com/projects/android/tutorial":http://www.onebitwonder.com/projects/android/tutorial
+
+h2. "http://screencustoms.com/post/5484517099/necessary-changes-to-ant-scripts-when-building-an-app":Necessary changes to Ant scripts when building an app through Android TextMate bundle
