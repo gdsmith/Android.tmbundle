@@ -1,4 +1,4 @@
-h3. The Missing Android Bundle for TextMate
+h1. The Missing Android Bundle for TextMate
 
 A TextMate bundle for Android app developers who want an alternative to the Eclipse plug-in. Features easy-to-use interfaces to quickly execute the basic commands needed to create, update, and run Android apps.
 
