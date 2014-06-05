@@ -47,13 +47,16 @@
 		Copyright(c) OneBit
 		*/
 		html{color:#000;background:#a5c63b;}
+		body {
+			overflow:auto;
+		}
 		#wrap{
 			float:left;
 			width:100%;
 			font-family: Georgia, serif;
 			line-height: 1.5em;
 			min-width:400px;
-			overflow-x: hidden;
+			/* overflow-x:auto; */
 		}
 		#content{
 		    float:left;
@@ -115,7 +118,7 @@
 	<div id="wrap">
 		<div id="head">
 			<h1>{{ title }}</h1>
-			<h2><a href="javascript:TextMate.system('open http://www.onebitwonder.com/', null);">Android TextMate Bundle 0.41 for SDK r08</a></h2>
+			<h2><a href="javascript:TextMate.system('open http://www.onebitwonder.com/', null);">Android TextMate Bundle 0.42 for SDK r11</a></h2>
 		</div>
 		<div id="content">
 			{% block content %}{% endblock %}
