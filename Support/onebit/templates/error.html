@@ -16,7 +16,7 @@
 
 {% block content %}
 	<h3>eek</h3>
-	{% if sdk %}
+	{% if not sdk %}
 		<span class="error">$ANDROID_SDK has not been set correctly</span>
 	{% else %}
 		<span class="error">{{ error }}</span>

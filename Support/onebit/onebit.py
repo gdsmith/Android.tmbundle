@@ -3,8 +3,6 @@ import os
 
 from jinjalib.loaders import FileSystemLoader
 env = Environment(loader=FileSystemLoader(os.environ['TM_BUNDLE_SUPPORT']+'/onebit/templates'))
-    
-    
 
 import commands
 cmds = (
@@ -13,15 +11,14 @@ cmds = (
     {'test':'which "$ANDROID_SDK"/"tools/emulator"', 'error':'$ANDROID_SDK/tools/emulator could not be found'},
     {'test':'which "$ANDROID_SDK"/"platform-tools/adb"', 'error':'$ANDROID_SDK/platform-tools/adb could not be found'},
 )
+
 for cmd in cmds:
     if commands.getoutput(cmd['test']) == '':
         import sys
         template = env.get_template("error.html")
-        sys.exit(template.render(
+        print(template.render(
             sdk=('ANDROID_SDK' in os.environ),
             title='Error', 
             error=cmd['error'],
         ))
-
-
-
+        sys.exit()
